@@ -1,5 +1,7 @@
+import com.sun.tools.javac.Main
+
 plugins{
-    id 'java'
+    id 'application'    // Implicitly applies the java and distribution plugins
 }
 
 sourceSets {
@@ -9,3 +11,6 @@ sourceSets {
         }
     }
 }
+
+mainClassName='com.coin.price.checker.CoinPrice'
+version=1.0
