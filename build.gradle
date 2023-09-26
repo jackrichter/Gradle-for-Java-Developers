@@ -1,7 +1,7 @@
 import com.sun.tools.javac.Main
 
 plugins{
-    id 'application'    // Implicitly applies the java and distribution plugins
+    id 'application'    // Implicitly applies the java and distribution plugins, and as such, adds the 'run' task. And the gradle property 'mainClassName' is added!!!
 }
 
 sourceSets {
@@ -14,3 +14,11 @@ sourceSets {
 
 mainClassName='com.coin.price.checker.CoinPrice'
 version=1.0
+
+dependencies {
+    implementation 'org.jsoup:jsoup:1.16.1'
+}
+
+repositories {
+    mavenCentral()
+}
